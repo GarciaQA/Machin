@@ -1,14 +1,34 @@
+@font-face {
+    font-family: 'HelveticaforTarget-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('HelveticaforTarget-Bold'), url('https://fonts.cdnfonts.com/s/16421/HelveticaforTarget-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'HelveticaforTarget';
+    font-style: normal;
+    font-weight: 400;
+    src: local('HelveticaforTarget'), url('https://fonts.cdnfonts.com/s/16421/HelveticaforTarget.woff') format('woff');
+}
+
 html,
 body {
     background-color: #292a2e;
     overflow-x: hidden;
     width: 100vw;
-    height: 100vh;
+}
+
+hr{
+    border: 1px solid #fff;
+    opacity: 0.5;
 }
 
 header {
+    height: 100vh;
     text-align: center;
     width: 100vw;
+    margin-bottom: 50px;
 }
 
 header .backdrop {
@@ -30,5 +50,159 @@ header .logo {
 }
 
 header .background {
+    position: absolute;
     width: 100%;
+    left: 0;
+}
+
+header .text-banner {
+    position: absolute;
+    z-index: 2;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+}
+
+header .text-banner .col1, header .text-banner .col2{
+    align-self: center;
+    width: 50%;
+}
+
+.offers .card {
+    background-position: center !important;
+    background-size: contain !important;
+    width: 400px;
+    height: 400px;
+}
+
+
+.product{
+    width: 180px;
+}
+
+h1, h5{
+    font-family: 'HelveticaforTarget-Bold', sans-serif;
+}
+.primary{
+    color: #F0810A;
+}
+
+.secondary{
+    color: #FFF;
+}
+
+.tpn-0{
+    font-size: 100px;
+}
+
+.tpn-1 {
+    font-size: 60px;
+}
+
+.tpn-1m{
+    font-size: 53px;
+}
+
+.tpn-2{
+    font-size: 31px;
+}
+
+.tpn-3{
+    font-size: 20px;
+}
+
+.offers {
+    width: 100vw;
+    height: 400px;
+}
+
+.offers .col1, .offers .col2 {
+    width: 30%;
+    align-self: center;
+}
+
+.swiper-slide.hover{
+    transition: 0.3s;
+    filter: blur(10px);
+    background-color: #292a2e;
+}
+
+.btn-buy{
+    position: absolute;
+    z-index: 2;
+    margin-top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.btn-buy.see{
+    display: block;
+}
+
+footer div>div {
+    font-family: 'HelveticaforTarget', sans-serif;
+    text-align: center;
+    align-self: center;
+    padding: 10px;
+    color: white;
+    width: 50%;
+}
+
+footer div>div:nth-child(1), footer div>div:nth-child(2){
+    font-size: 14px;
+}
+
+footer div>div:nth-child(3){
+    font-size: 10px;
+}
+
+.follow-icon {
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: #F0810A;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#F0810A;
+}
+
+@media (max-width: 978px) {
+    header .text-banner .col1{
+        text-align: start;
+        padding: 15px;
+    }
+    .product {
+        width: 140px;
+    }
+
+    .offers .col1, .offers .col2 {
+        width: 40%;
+    }
+    .tpn-0 {
+        font-size: 50px;
+    }
+    .tpn-1 {
+        font-size: 40px;
+    }
+    .tpn-1m {
+        font-size: 20px;
+    }
+    .tpn-2 {
+        font-size: 20px;
+    }
 }
