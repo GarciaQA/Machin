@@ -1,0 +1,34 @@
+html,
+body {
+    background-color: #292a2e;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    width: 100vw;
+}
+
+header .backdrop {
+    background: linear-gradient(180deg, rgb(41 42 46 / 70%) 0%, rgb(41 42 46) 50%);
+    position: absolute;
+    width: 100%;
+    height: -webkit-fill-available;
+    z-index: 1;
+    top: 0;
+}
+
+header .logo {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+}
+
+header .background {
+    width: 100%;
+}
