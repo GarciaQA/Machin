@@ -1,5 +1,5 @@
 new Swiper('.offers', {
-    slidesPerView: 1,
+    slidesPerView: 2,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -15,4 +15,9 @@ new Swiper('.offers', {
     scrollbar: {
       el: '.swiper-scrollbar',
     },
+    breakpoints: {
+      '@0.00': {
+        slidesPerView: 1,
+      },
+    }
 });
