@@ -1,15 +1,8 @@
 @font-face {
-    font-family: 'HelveticaforTarget-Bold';
+    font-family: 'Turkish Times New Roman';
     font-style: normal;
     font-weight: 700;
-    src: local('HelveticaforTarget-Bold'), url('https://fonts.cdnfonts.com/s/16421/HelveticaforTarget-Bold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'HelveticaforTarget';
-    font-style: normal;
-    font-weight: 400;
-    src: local('HelveticaforTarget'), url('https://fonts.cdnfonts.com/s/16421/HelveticaforTarget.woff') format('woff');
+    src: local('Turkish Times New Roman'), url('https://fonts.cdnfonts.com/s/18465/TTimesb.woff') format('woff');
 }
 
 html,
@@ -35,7 +28,7 @@ header {
 header .backdrop {
     background: linear-gradient(180deg, rgb(41 42 46 / 70%) 0%, rgb(41 42 46) 50%);
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: -webkit-fill-available;
     z-index: 1;
     top: 0;
@@ -50,10 +43,9 @@ header .logo {
     z-index: 2;
 }
 
-header .background {
-    position: absolute;
+.background {
+    background-size: cover !important;
     width: 100%;
-    left: 0;
 }
 
 header .text-banner {
@@ -64,25 +56,36 @@ header .text-banner {
     right: 0;
 }
 
+.text-banner, .swiper-slide{
+    padding: 0 10%;
+}
+
 header .text-banner .col1, header .text-banner .col2{
     align-self: center;
     width: 50%;
 }
 
+.offers-container {
+    margin-bottom: 150px;
+}
+
 .offers .card {
     background-position: center !important;
     background-size: contain !important;
-    width: 400px;
-    height: 400px;
+    background-color: #1d1d1d;
+    padding: 50px 0;
 }
 
 
 .product{
-    width: 180px;
+    height: 330px;
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-filter: drop-shadow(10px 10px 10px #222 );
+    filter: drop-shadow(10px 10px 10px #222 );
 }
 
-h1, h5{
-    font-family: 'HelveticaforTarget-Bold', sans-serif;
+h1, h5, span, footer > *{
+    font-family: 'Turkish Times New Roman', sans-serif;
 }
 .primary{
     color: #F0810A;
@@ -137,7 +140,7 @@ h1, h5{
 .btn-buy{
     position: absolute;
     z-index: 2;
-    margin-top: 150px;
+    margin-top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
@@ -145,6 +148,26 @@ h1, h5{
 
 .btn-buy.see{
     display: block;
+}
+
+.products-container {
+    margin-bottom: 100px;
+}
+
+
+.products-container .card {
+    border-radius: 5px;
+    background-size: cover !important;
+    background-position: center !important;
+    image-rendering: -webkit-optimize-contrast;
+    width: 350px;
+    height: 350px;
+    border: 0;
+}
+
+footer {
+    background-color: #1d1d1d;
+    padding: 0 10%;
 }
 
 footer div>div {
@@ -165,7 +188,8 @@ footer div>div:nth-child(3){
 }
 
 .follow-icon {
-    border-radius: 7px;
+    height: 18px;
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar {
@@ -189,12 +213,13 @@ footer div>div:nth-child(3){
 }
 
 @media (max-width: 978px) {
+    header .logo {
+        width: 100px;
+    }
+
     header .text-banner .col1{
         text-align: start;
         padding: 15px;
-    }
-    .product {
-        width: 140px;
     }
 
     .offers .col1, .offers .col2 {

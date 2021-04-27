@@ -1,4 +1,4 @@
-$(".swiper-slide").mouseenter(function(e){
+$(".swiper-slide .card").mouseenter(function(e){
     $(".swiper-slide").addClass('hover');
     $('.btn-buy').addClass('see');
  });
@@ -8,7 +8,7 @@ $(".swiper-slide").mouseenter(function(e){
     $(".swiper-slide").addClass('hover');
  });
 
- $(".swiper-slide").mouseleave(function(e){
+ $(".swiper-slide .card").mouseleave(function(e){
     $(".swiper-slide").removeClass('hover');
     $('.btn-buy').removeClass('see');
  });
